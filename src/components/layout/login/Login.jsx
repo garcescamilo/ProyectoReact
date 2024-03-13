@@ -33,7 +33,7 @@ const Login = () => {
           type="password"
         />
       </section>
-      <button type="submit">Iniciar sesión</button>
+      <button type="submit" className="btnLogin">Iniciar sesión</button>
       {error && <p className="error-message">{error}</p>}
     </form>
   );

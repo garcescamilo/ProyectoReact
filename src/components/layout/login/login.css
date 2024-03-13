@@ -26,7 +26,7 @@
     box-sizing: border-box;
   }
   
-  button {
+  .btnLogin {
     width: 100%;
     padding: 10px;
     background-color: #4caf50;
@@ -36,7 +36,7 @@
     cursor: pointer;
   }
   
-  button:hover {
+  .btnLogin:hover {
     background-color: #45a049;
   }
   
@@ -47,4 +47,3 @@
     font-size: 1.3em;
     font-family: 'Arial', sans-serif;
   }
-  

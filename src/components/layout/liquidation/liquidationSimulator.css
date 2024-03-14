@@ -1,5 +1,20 @@
-.checkTranport {
+*{
+    font-family: sans-serif ;
+}
+
+.simuladorContainer{
     display: flex;
+    justify-content: space-evenly;
+    margin: 3% 0;
+}
+.simuladorContent div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 1.8% 0;
+}
+
+.checkTranport {
+    display: flex !important;
 }
 
 #auxilioTransporte{
@@ -14,4 +29,29 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 5% 0;
+}
+
+
+/* Data table */
+.dataLiqSection{
+    text-align: center;
+}
+.tableDataLiquidator{
+    display: flex;
+    justify-content: center;
+}
+.tableDataLiquidator > tbody > tr > th{
+    border: solid #000 1px;
+    padding: 6px;
+    text-align: center; 
+}
+.tableDataLiquidator > tbody > tr > td{
+    border: solid #000 1px;
+    padding: 6px;
+    text-align: center;
+}
+
+.dataLiquidatorBody{
+    margin-top: 5%;
 }

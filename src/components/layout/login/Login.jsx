@@ -19,23 +19,25 @@ const Login = () => {
   }
 
   return (
-    <form onSubmit={validarInicioSesion}>
-    <h1>Inicio sesión resposables nomina</h1>
-      <section>
-        <input
-          onChange={(e) => setUser(e.target.value)}
-          placeholder="Usuario"
-          type="text"
-        />
-        <input
-          onChange={(e) => setPass(e.target.value)}
-          placeholder="Contraseña"
-          type="password"
-        />
-      </section>
-      <button type="submit" className="btnLogin">Iniciar sesión</button>
-      {error && <p className="error-message">{error}</p>}
-    </form>
+    <div className="loginCont">
+      <form onSubmit={validarInicioSesion} className="loginForm">
+      <h1>Inicio sesión resposables nomina</h1>
+        <section>
+          <input
+            onChange={(e) => setUser(e.target.value)}
+            placeholder="Usuario"
+            type="text"
+          />
+          <input
+            onChange={(e) => setPass(e.target.value)}
+            placeholder="Contraseña"
+            type="password"
+          />
+        </section>
+        <button type="submit" className="btnLogin">Iniciar sesión</button>
+        {error && <p className="error-message">{error}</p>}
+      </form>
+    </div>
   );
 };
 

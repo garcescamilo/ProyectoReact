@@ -2,14 +2,11 @@
 import './Create.css'
 const CreateAdmin = () => {
     return (
-      <div>
-            <h1>CALCULADORA DE LIQUIDACIÓN</h1>
-            <div>
-                <button className='btnCreate'>Ir al siguiente formulario</button>
-            </div>
+        <div className='createContainer'>
+            <h2>Crear/editar empleado liquidado</h2>
             <div className="container">
                 <div className="section">
-                    <h2>EMPLEADO</h2>
+                    <h3>Empleado</h3>
                     <div className="form-group">
                         <label htmlFor="nombres">Nombres y Apellidos:</label><br />
                         <input type="text" id="nombres" name="nombres" /><br />
@@ -25,11 +22,11 @@ const CreateAdmin = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="numero_documento">Número de Documento:</label><br />
-                        <input type="text" id="numero_documento" name="numero_documento" /><br />
+                        <input type="number" id="numero_documento" name="numero_documento" /><br />
                     </div>
                 </div>
                 <div className="section">
-                    <h2>EMPLEADOR</h2>
+                    <h3>Empleador</h3>
                     <div className="form-group">
                         <label htmlFor="razon_social">Razón Social:</label><br />
                         <input type="text" id="razon_social" name="razon_social" /><br />
@@ -43,51 +40,53 @@ const CreateAdmin = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="numero_documento_empleador">Número de Documento:</label><br />
-                        <input type="text" id="numero_documento_empleador" name="numero_documento_empleador" /><br />
+                        <input type="number" id="numero_documento_empleador" name="numero_documento_empleador" /><br />
                     </div>
                 </div>
             </div>
             <div>
-                <div className="section">
-                    <h2>LIQUIDACIÓN</h2>
+                <div className="section section3">
+                    <h3>Motivo Liquidación</h3>
                     <div className="form-group">
-                        <label htmlFor="motivo_liquidacion">Motivo de Liquidación:</label><br />
-                        <input type="text" id="motivo_liquidacion" name="motivo_liquidacion" /><br />
+                        <label htmlFor="motivo_liquidacion">Motivo de Liquidación:</label>
+                        <input type="text" id="motivo_liquidacion" name="motivo_liquidacion" />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="periodo_prueba">Período de Prueba:</label><br />
-                        <select id="periodo_prueba" name="periodo_prueba">
-                            <option value="Si">Si</option>
-                            <option value="No">No</option>
-                        </select><br />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="indemnizacion_despido">Indemnización por Despido:</label><br />
-                        <select id="indemnizacion_despido" name="indemnizacion_despido">
-                            <option value="Si">Si</option>
-                            <option value="No">No</option>
-                        </select><br />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="tipo_contrato">Tipo de Contrato:</label><br />
-                        <select id="tipo_contrato" name="tipo_contrato">
-                            <option value="Indefinido">Indefinido</option>
-                            <option value="Fijo">Fijo</option>
-                        </select><br />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="salario_integral">Salario Integral:</label><br />
-                        <select id="salario_integral" name="salario_integral">
-                            <option value="Si">Si</option>
-                            <option value="No">No</option>
-                        </select><br />
+                    <div className='selections'>
+                        <div className="form-group">
+                            <label htmlFor="periodo_prueba">Período de Prueba:</label>
+                            <select id="periodo_prueba" name="periodo_prueba">
+                                <option value="Si">Si</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="indemnizacion_despido">Indemnización por Despido:</label>
+                            <select id="indemnizacion_despido" name="indemnizacion_despido">
+                                <option value="Si">Si</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="tipo_contrato">Tipo de Contrato:</label>
+                            <select id="tipo_contrato" name="tipo_contrato">
+                                <option value="Indefinido">Indefinido</option>
+                                <option value="Fijo">Fijo</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="salario_integral">Salario Integral:</label>
+                            <select id="salario_integral" name="salario_integral">
+                                <option value="Si">Si</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div className="container">
-                    <div className="section">
-                        <h2>PERIODO DE LIQUIDACIÓN</h2>
+                <div className="section section4">
+                    <h3>Periodo de liquidación</h3>
+                    <div className='section4Form'>
                         <div className="form-group">
                             <label htmlFor="fecha_contratacion">Fecha de Contratación:</label><br />
                             <input type="date" id="fecha_contratacion" name="fecha_contratacion" /><br />
@@ -105,10 +104,10 @@ const CreateAdmin = () => {
                             <input type="number" id="dias_vacaciones_pendientes" name="dias_vacaciones_pendientes" /><br />
                         </div>
                     </div>
-                    <div className="section">
-                        <div>
-                            <h2>SALARIO BASE DE LIQUIDACIÓN</h2>
-                        </div>
+                </div>
+                <div className="section section4">
+                    <h3>Salario base liquidación</h3>
+                    <div className='section4Form'>
                         <div className="form-group">
                             <label htmlFor="salario_base">Salario Base:</label><br />
                             <input type="number" id="salario_base" name="salario_base" /><br />
@@ -135,6 +134,9 @@ const CreateAdmin = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+        <div>
+                <button className='btnCreate'>Guardar Empleado/Cambios</button>
             </div>
         </div>
     );

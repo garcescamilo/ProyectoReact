@@ -2,13 +2,13 @@ import './AdminDashboard.css'
 //Administración de empleados
 const AdminDashboard = () => {
   return (
-    <div>
+    <div className='dashboardFilter'>
       {/* Admin Dashboard
       Voy a necesitar : agregar , editar , liquidar 
       id, nombre 
       para el buscar : nombre : identificacion: departamento: : puesto de trabajo: tipo de contrato
        */}
-       <h1>FILTRO</h1>
+       <h2>Consultar empleados</h2>
        <div className="box-filter">
           <div className='filter filterName'>
             <input className='inputFilter' type="text" placeholder="Nombre" />

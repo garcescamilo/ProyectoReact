@@ -1,6 +1,4 @@
 //Simulador de liquidación
-
-import { useState } from 'react';
 import './liquidationSimulator.css';
 
 
@@ -13,22 +11,22 @@ const LiquidationSimulator = () => {
         <div className='simuladorContent'>
           <div>
             <label htmlFor="fechaInicial">Tipo de contrato:</label>
-            <input type="date" id='fechaInicial'/>  
+            <input type="date" className='simuInput' id='fechaInicial'/>  
             </div>
           
           <div>
-            <label htmlFor="fechaInicial">Fecha de inicio del periodo a liquidar:</label>
-            <input type="date" id='fechaInicial'/>
+            <label htmlFor="fechaInicial">Fecha de inicio periodo a liquidar:</label>
+            <input type="date" className='simuInput' id='fechaInicial'/>
             </div>
 
           <div>
-            <label htmlFor="fechaFinal">Fecha de finalización del periodo a liquidar:</label>
-            <input type="date" id='fechaFinal'/>
+            <label htmlFor="fechaFinal">Fecha de fin periodo a liquidar:</label>
+            <input type="date" className='simuInput' id='fechaFinal'/>
             </div>
 
           <div>
             <label htmlFor="salarioMensual">Salario Mensual:</label>
-            <input type="number" />
+            <input type="number" className='simuInput'/>
           </div>
 
             <label>¿Tienes derecho a un auxilio de transporte? </label>  
@@ -56,39 +54,48 @@ const LiquidationSimulator = () => {
               </div>
             </div>
 
-            <div>
+            <div className='cont_btnLiquida'>
                 <button className='btnLiquida'>Calcula tu liquidación</button>
             </div>
         </div>
       </div>
 
       <div className='dataLiqSection'>
-        <h2>Liquidación laboral</h2>
-          <div className='dataLiquidatorHead'> 
-            <table className='tableDataLiquidator'>
+        <h2>Liquidación laboral <span style={{fontSize: '.7em'}}>(Resultado)</span></h2>
+        <div className='dataLiquiHeadCont'>
+          <div className='dataLiquidatorHead'>
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha inicio contrato</th>
+                  <th>Fecha final de contrato</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
-                  <td>Fecha inicio de contrato</td>
                   <td>01/01/2023</td>
-                </tr>
-                <tr>
-                  <td>Fecha final de contrato</td>
                   <td>12/31/2023</td>
                 </tr>
               </tbody>
-
+            </table>
+          </div>
+          <div className='dataLiquidatorHead'>
+            <table>
+              <thead>
+                <tr>
+                  <th>Días a liquidar</th>
+                  <th>Tipo de contrato</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
-                  <td>Días a liquidar</td>
                   <td>360</td>
-                </tr>
-                <tr>
-                  <td>Tipo de contrato</td>
                   <td>Indefinido</td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
 
           <div className='dataLiquidatorBody'>
             <table className='tableDataLiquidator'>
@@ -132,7 +139,7 @@ const LiquidationSimulator = () => {
               </tbody>
             </table>
             <div>
-                <button className='btnLiquida'>Descargar</button>
+                <button className='btnDescargaLiquida'>Descargar</button>
             </div>
           </div>
       </div>

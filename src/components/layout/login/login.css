@@ -1,49 +1,55 @@
 /* Login.css */
 
-.login-form {
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+.loginCont{
+  width: 39%;
+    display: block;
+    box-shadow: 6px 9px 29px #000;
+    padding: 3%;
+    border-radius: 10px;
+    background-color: #5c008ac0;
+    background-image: url(https://www.transparenttextures.com/patterns/arches.png);
+    margin: 1% auto 2%;
+}
 
-  h1 {
-    text-align: center;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  section {
-    margin-bottom: 15px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  .btnLogin {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btnLogin:hover {
-    background-color: #45a049;
-  }
-  
-  .error-message {
-    color: red;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.3em;
-    font-family: 'Arial', sans-serif;
-  }
+.loginForm > h1{
+  margin-top: 0;
+  color: #fff;
+}
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+section {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.btnLogin {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnLogin:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: #e5e509;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.3em;
+  font-family: 'Arial', sans-serif;
+}

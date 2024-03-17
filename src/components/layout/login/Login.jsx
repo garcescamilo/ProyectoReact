@@ -27,11 +27,13 @@ const Login = () => {
             onChange={(e) => setUser(e.target.value)}
             placeholder="Usuario"
             type="text"
+            className="inputSession"
           />
           <input
             onChange={(e) => setPass(e.target.value)}
             placeholder="Contraseña"
             type="password"
+            className="inputSession"
           />
         </section>
         <button type="submit" className="btnLogin">Iniciar sesión</button>

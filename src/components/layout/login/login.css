@@ -6,7 +6,7 @@
     box-shadow: 6px 9px 29px #000;
     padding: 3%;
     border-radius: 10px;
-    background-color: #5c008ac0;
+    background-color: #9b9a9a;
     background-image: url(https://www.transparenttextures.com/patterns/arches.png);
     margin: 1% auto 2%;
 }
@@ -30,6 +30,9 @@ input {
   padding: 8px;
   margin-bottom: 10px;
   box-sizing: border-box;
+}
+.inputSession{
+  margin: 2% 0;
 }
 
 .btnLogin {

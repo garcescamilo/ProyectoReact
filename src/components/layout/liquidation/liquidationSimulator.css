@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-evenly;
     padding:1% 0;
-    background-color: #fff !important;
+    background-color: #dddddd !important;
     background-image: url(https://www.transparenttextures.com/patterns/arches.png);
     font-size: 1.1em;
 }

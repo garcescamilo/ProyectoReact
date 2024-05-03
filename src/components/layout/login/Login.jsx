@@ -1,46 +1,55 @@
 //Login personal de nómina
 
 import { useState } from "react";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth/cordova";
+import appFirebase from "../../../../back/credenciales";
 import './login.css';
+const auth = getAuth(appFirebase)
 
 const Login = () => {
-  const [getUser, setUser] = useState("");
-  const [getPass, setPass] = useState("");
-  const [error, setError] = useState("");
 
-  function validarInicioSesion(event) {
-    event.preventDefault(); // Evitar recarga en página
+  const [registrando, setRegistrando] = useState(false);
 
-    if (getUser === "jaime" && getPass === "123") {
-      console.log("Inicio de sesión correcta");
+  const funcAutenticacion = async (e) => {
+    e.preventDefault();
+    const correo = e.target.email.value;
+    const contraseña = e.target.password.value;
+
+    if (registrando) {
+      await createUserWithEmailAndPassword(auth, correo, contraseña)
     } else {
-      setError("Credenciales incorrectas");
+      await signInWithEmailAndPassword(auth, correo, contraseña)
     }
   }
 
   return (
     <div className="loginCont">
-      <form onSubmit={validarInicioSesion} className="loginForm">
-      <h1>Inicio sesión resposables nomina</h1>
+      <form onSubmit={funcAutenticacion} className="loginForm">
+        <h1>Registro responsables nómina</h1>
         <section>
           <input
-            onChange={(e) => setUser(e.target.value)}
-            placeholder="Usuario"
-            type="text"
+            id="email"
+            placeholder="Correo Electronico"
+            type="email"
             className="inputSession"
           />
           <input
-            onChange={(e) => setPass(e.target.value)}
+            id="password"
             placeholder="Contraseña"
             type="password"
             className="inputSession"
           />
+          <button className="btnform">{registrando ? "Registrate" : "Inicia Sesion"}</button>
         </section>
-        <button type="submit" className="btnLogin">Iniciar sesión</button>
-        {error && <p className="error-message">{error}</p>}
+
+        <hr></hr>
+        <h4>{registrando ? "ya tienes cuenta" : "No tienes cuenta"}
+          <button className="btnLogin" onClick={() => { setRegistrando(!registrando) }}>{registrando ? " inicia sesion" : "Registrate"}</button>
+        </h4>
       </form>
+
+
     </div>
   );
 };
-
 export default Login;

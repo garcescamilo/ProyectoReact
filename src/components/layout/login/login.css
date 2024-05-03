@@ -1,20 +1,21 @@
 /* Login.css */
 
-.loginCont{
+.loginCont {
   width: 39%;
-    display: block;
-    box-shadow: 6px 9px 29px #000;
-    padding: 3%;
-    border-radius: 10px;
-    background-color: #9b9a9a;
-    background-image: url(https://www.transparenttextures.com/patterns/arches.png);
-    margin: 1% auto 2%;
+  display: block;
+  box-shadow: 6px 9px 29px #000;
+  padding: 3%;
+  border-radius: 10px;
+  background-color: #9b9a9a;
+  background-image: url(https://www.transparenttextures.com/patterns/arches.png);
+  margin: 1% auto 2%;
 }
 
-.loginForm > h1{
+.loginForm>h1 {
   margin-top: 0;
   color: #fff;
 }
+
 h1 {
   text-align: center;
   color: #333;
@@ -31,11 +32,13 @@ input {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
-.inputSession{
+
+.inputSession {
   margin: 2% 0;
+  outline: none;
 }
 
-.btnLogin {
+.btnform {
   width: 100%;
   padding: 10px;
   background-color: #4caf50;
@@ -45,8 +48,18 @@ input {
   cursor: pointer;
 }
 
-.btnLogin:hover {
+.btnform:hover {
   background-color: #45a049;
+}
+
+.btnLogin {
+  width: 100%;
+  padding: 10px;
+  background-color: #0059ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .error-message {

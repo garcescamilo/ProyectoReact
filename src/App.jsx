@@ -10,6 +10,7 @@ import HeadNav from './components/layout/Header/nav.jsx';
 import appFirebase from '../back/credenciales.js'
 import { getAuth, onAuthStateChanged, } from 'Firebase/auth'
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const auth = getAuth(appFirebase)
 
 function App() {
@@ -22,9 +23,21 @@ function App() {
     }
   })
   return (
-    <div>
-      {usuario ? <LiquidationSimulator correoUsuario={usuario.email} /> : <Login />}
-    </div>
+
+    <Router>
+      <HeadNav />
+
+      <Routes>
+
+        <Route path="/" element={usuario ? <LiquidationSimulator /> : <Login />} />
+        <Route path='/liquidacion' element={<LiquidationSimulator />} />
+        <Route path='/admindash' element={<AdminDashborad />} />
+
+      </Routes>
+
+
+    </Router>
+
   );
 }
 

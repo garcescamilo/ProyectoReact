@@ -23,32 +23,34 @@ const Login = () => {
   }
 
   return (
-    <div className="loginCont">
-      <form onSubmit={funcAutenticacion} className="loginForm">
-        <h1>Registro responsables nómina</h1>
-        <section>
-          <input
-            id="email"
-            placeholder="Correo Electronico"
-            type="email"
-            className="inputSession"
-          />
-          <input
-            id="password"
-            placeholder="Contraseña"
-            type="password"
-            className="inputSession"
-          />
-          <button className="btnform">{registrando ? "Registrate" : "Inicia Sesion"}</button>
-        </section>
+    <div className="caja-padre-login">
+      <div className="loginCont">
+        <form onSubmit={funcAutenticacion} className="loginForm">
+          <h1>Login</h1>
+          <section>
+            <input
+              id="email"
+              placeholder="Correo Electronico"
+              type="email"
+              className="inputSession"
+            />
+            <input
+              id="password"
+              placeholder="Contraseña"
+              type="password"
+              className="inputSession"
+            />
+            <button className="btnform">{registrando ? "Registrate" : "Inicia Sesion"}</button>
+          </section>
 
-        <hr></hr>
-        <h4>{registrando ? "ya tienes cuenta" : "No tienes cuenta"}
-          <button className="btnLogin" onClick={() => { setRegistrando(!registrando) }}>{registrando ? " inicia sesion" : "Registrate"}</button>
-        </h4>
-      </form>
+          <hr></hr>
+          <h4 className="cuenta-no">{registrando ? "ya tienes cuenta" : "No tienes cuenta"}
+            <button className="btnLogin" onClick={() => { setRegistrando(!registrando) }}>{registrando ? " inicia sesion" : "Registrate"}</button>
+          </h4>
+        </form>
 
 
+      </div>
     </div>
   );
 };

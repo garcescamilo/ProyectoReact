@@ -1,24 +1,32 @@
 /* Login.css */
+.caja-padre-login {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/src/assets/imgs/fondo-login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7%;
+
+}
 
 .loginCont {
-  width: 39%;
+  width: 29%;
   display: block;
-  box-shadow: 6px 9px 29px #000;
   padding: 3%;
   border-radius: 10px;
-  background-color: #9b9a9a;
-  background-image: url(https://www.transparenttextures.com/patterns/arches.png);
-  margin: 1% auto 2%;
+  background-color: #4c4d4e4f;
+  margin: auto;
+
 }
 
 .loginForm>h1 {
   margin-top: 0;
-  color: #fff;
+  color: #000000a4;
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #111111;
   font-family: 'Arial', sans-serif;
 }
 
@@ -41,7 +49,7 @@ input {
 .btnform {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #0f0e0fd8;
   color: white;
   border: none;
   border-radius: 4px;
@@ -49,17 +57,22 @@ input {
 }
 
 .btnform:hover {
-  background-color: #45a049;
+  background-color: #072380;
 }
 
 .btnLogin {
   width: 100%;
   padding: 10px;
-  background-color: #0059ff;
+  background-color: #0c0c0c;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1em;
+}
+
+.cuenta-no {
+  font-size: 1em;
 }
 
 .error-message {

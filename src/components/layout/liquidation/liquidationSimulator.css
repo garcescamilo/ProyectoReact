@@ -1,110 +1,171 @@
-*{
-    font-family: sans-serif ;
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
 }
 
-.simuladorContainer{
-    display: flex;
-    justify-content: space-evenly;
-    padding:1% 0;
-    background-color: #dddddd !important;
-    background-image: url(https://www.transparenttextures.com/patterns/arches.png);
-    font-size: 1.1em;
+.simulador-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
-.simuladorContainer > div{
+
+.simulador-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.simulador-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.simulador-form {
     width: 45%;
 }
 
-.simuladorContent div{
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-control {
     width: 100%;
-    margin: 1.2% 0;
-    
-}
-.simuladorContainer > div > h2{
-    text-align: center;
-    margin: 3% 0 4%;
-    font-weight: bold;
-}
-.simuInput{
-    padding: 3px;
-}
-.simuladorContent label{
-    font-size: 1.1em;
-    font-weight: 700;
-} 
-.simuladorContent input{
-   color: #757575;
-   width: 90%;
-} 
-.checkTranport {
-    display: flex !important;
-}
-.checkTranport >div{
-    display: flex;
-    justify-content: space-evenly;
-} 
-#auxilioTransporte{
-    width: 9%;
-}
-
-.btnLiquida{
-    background-color: rgb(137, 137, 245);
-    width: 90%;
-    padding: 10px;
-    color: white;
-    border: none;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.radio-option input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.radio-option input[type="radio"]:checked {
+    border-color: #555;
+    background-color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
     cursor: pointer;
-    margin: 5% 0 4%;
 }
 
-/* Data Head */
-.dataLiquiHeadCont{
-    display: flex; 
-    margin: 5% 0;  
-}
-.dataLiquidatorHead > table > thead > tr > th{
-    border: 1px solid #000;
-}
-.dataLiquidatorHead > table > tbody > tr > td{
-    border: 1px solid #000;
-}
-h2 > span{
-    color: #5f5f5f;
+.btn-primary {
+    background-color: #555;
+    color: #fff;
+    border: none;
 }
 
+.btn-primary:hover {
+    background-color: #333;
+}
 
-/* Data table */
-.dataLiqSection{
+.btn-secondary {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #ccc;
+}
+
+.simulador-resultado {
+    width: 45%;
+}
+
+.result-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.resultado-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-item {
     text-align: center;
 }
-.tableDataLiquidator{
-    display: flex;
-    justify-content: center;
+
+.header-value {
+    font-weight: 600;
+    color: #555;
 }
-.tableDataLiquidator > tbody{
+
+table {
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
-.tableDataLiquidator > tbody > tr > th{
-    border: solid #000 1px;
-    padding: 6px;
-    text-align: center; 
-    width: 10%;
-}
-.tableDataLiquidator > tbody > tr > td{
-    border: solid #000 1px;
-    padding: 6px;
-    text-align: center;
-}
-.btnDescargaLiquida{
-    background-color: rgb(137, 137, 245);
-    width: 90%;
+
+th,
+td {
     padding: 10px;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 3% 0;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
+th {
+    background-color: #f2f2f2;
+}
 
+tr:last-child th,
+tr:last-child td {
+    border-bottom: none;
+}
 
+.total-row th,
+.total-row td {
+    font-weight: 600;
+    color: #555;
+}

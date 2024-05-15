@@ -4,13 +4,19 @@ import { NavLink } from 'react-router-dom';
 
 function HeadNav() {
     return (
+        <>
+            <div className='padre-nav'>
+                <nav>
+                    <div className='nav'>
+                        <NavLink to={"/liquidacion"}>Liquidar</NavLink>
+                        <NavLink to={"/admindash"}>DashBoard</NavLink>
+                        <NavLink to={"/analisis"}>Analisis</NavLink>
+                    </div>
+                </nav>
 
-        <nav>
-            <NavLink to={"/liquidacion"}>liquidar</NavLink>
-            <NavLink to={"/admindash"}>admindash</NavLink>
+            </div>
 
-        </nav>
-
+        </>
     );
 }
 

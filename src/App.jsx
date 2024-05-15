@@ -32,6 +32,7 @@ function App() {
         <Route path="/" element={usuario ? <LiquidationSimulator /> : <Login />} />
         <Route path='/liquidacion' element={<LiquidationSimulator />} />
         <Route path='/admindash' element={<AdminDashborad />} />
+        <Route path='/analisis' element={<DataAnalysis />} />
 
       </Routes>
 

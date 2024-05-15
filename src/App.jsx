@@ -8,7 +8,7 @@ import DataAnalysis from './components/layout/DataAnalysis/DataAnalysis'
 import HeadNav from './components/layout/Header/nav.jsx';
 //modulos de firebase
 import appFirebase from '../back/credenciales.js'
-import { getAuth, onAuthStateChanged, } from 'Firebase/auth'
+import { getAuth, signOut, onAuthStateChanged } from 'firebase/auth';
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const auth = getAuth(appFirebase)

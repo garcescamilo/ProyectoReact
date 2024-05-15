@@ -1,5 +1,6 @@
 import './AdminDashboard.css'
 import './AdminResults.css'
+
 //Administración de empleados
 const AdminDashboard = () => {
   return (

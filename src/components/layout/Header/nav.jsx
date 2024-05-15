@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 function HeadNav() {
     return (
         <>
+
             <div className='padre-nav'>
                 <nav>
                     <div className='nav'>

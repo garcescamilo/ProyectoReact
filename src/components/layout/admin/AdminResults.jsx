@@ -1,7 +1,10 @@
 import './AdminResults.css'
+
+
 const AdminResults = () => {
     return (
         <div className='boxResults'>
+
             <table className='tableResults'>
                 <thead>
                     <tr>

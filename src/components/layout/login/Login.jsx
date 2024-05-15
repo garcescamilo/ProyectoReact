@@ -44,7 +44,7 @@ const Login = () => {
           </section>
 
           <hr></hr>
-          <h4 className="cuenta-no">{registrando ? "ya tienes cuenta" : "No tienes cuenta"}
+          <h4 className="cuenta-no">{registrando ? "Ya tengo cuenta" : "No tengo cuenta"}
             <button className="btnLogin" onClick={() => { setRegistrando(!registrando) }}>{registrando ? " inicia sesion" : "Registrate"}</button>
           </h4>
         </form>

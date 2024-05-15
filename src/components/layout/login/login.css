@@ -72,7 +72,9 @@ input {
 }
 
 .cuenta-no {
+  margin-bottom: 2%;
   font-size: 1em;
+  text-align: center;
 }
 
 .error-message {

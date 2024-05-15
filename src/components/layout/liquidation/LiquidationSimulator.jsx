@@ -1,11 +1,8 @@
 import './liquidationSimulator.css';
-import appFirebase from '../../../../back/credenciales';
-import { getAuth, signOut } from 'firebase/auth';
-const auth = getAuth(appFirebase)
+
 const LiquidationSimulator = () => {
   return (<>
 
-    <button onClick={() => signOut(auth)}>Salir</button>
     <div className="simulador-container">
       <header className="simulador-header">
         <h1>Simulador de Liquidación</h1>

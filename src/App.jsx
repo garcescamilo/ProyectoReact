@@ -25,7 +25,7 @@ function App() {
   return (
 
     <Router>
-      <HeadNav />
+      {usuario && <HeadNav />}
 
       <Routes>
 

@@ -7,39 +7,22 @@ import AdminResults from './components/layout/admin/AdminResults.jsx'
 import DataAnalysis from './components/layout/DataAnalysis/DataAnalysis'
 import HeadNav from './components/layout/Header/nav.jsx';
 //modulos de firebase
-import appFirebase from '../back/credenciales.js'
-import { getAuth, signOut, onAuthStateChanged } from 'firebase/auth';
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-const auth = getAuth(appFirebase)
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
-  const [usuario, setUsuario] = useState(null);
-  onAuthStateChanged(auth, (usuarioFirebase) => {
-    if (usuarioFirebase) {
-      setUsuario(usuarioFirebase)
-    } else {
-      setUsuario(null)
-    }
-  })
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
-
     <Router>
-      {usuario && <HeadNav />}
-
+      {isAuthenticated && <HeadNav setIsAuthenticated={setIsAuthenticated} />} {/* Asegúrate de pasar setIsAuthenticated como una prop */}
       <Routes>
-
-        <Route path="/" element={usuario ? <LiquidationSimulator /> : <Login />} />
-        <Route path='/liquidacion' element={<LiquidationSimulator />} />
-        <Route path='/admindash' element={<AdminDashborad />} />
-        <Route path='/analisis' element={<DataAnalysis />} />
-
+        <Route path="/" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+        <Route path="/liquidacion" element={isAuthenticated ? <LiquidationSimulator /> : <Navigate to="/" />} />
+        <Route path="/admindash" element={isAuthenticated ? <AdminDashborad /> : <Navigate to="/" />} />
+        <Route path="/analisis" element={isAuthenticated ? <DataAnalysis /> : <Navigate to="/" />} />
       </Routes>
-
-
     </Router>
-
   );
 }
-
 export default App;

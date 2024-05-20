@@ -2,21 +2,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './nav.css'
 import logo from '../../../assets/react.svg'
 import { NavLink, useNavigate } from 'react-router-dom';
-import appFirebase from '../../../../back/credenciales';
-import { getAuth, signOut } from 'firebase/auth';
 
-const auth = getAuth(appFirebase);
 
-function HeadNav() {
-    const navigate = useNavigate();
+function HeadNav(props) {
 
-    const handleLogout = async () => {
-        try {
-            await signOut(auth);
-            navigate('/');
-        } catch (error) {
-            console.error('Error al cerrar sesión:', error);
-        }
+    const navigate = useNavigate(); // Importa useNavigate desde react-router-dom
+
+    const handleLogout = () => {
+        props.setIsAuthenticated(false);
+        navigate('/'); // Usa navigate para redirigir a la página de inicio de sesión
     };
 
     return (
@@ -25,7 +19,6 @@ function HeadNav() {
                 <div><img src={logo} alt="" /></div>
                 <nav>
                     <div className='nav'>
-
                         <NavLink to={"/liquidacion"} className='navlink'>Liquidar</NavLink>
                         <NavLink to={"/admindash"} className='navlink'>DashBoard</NavLink>
                         <NavLink to={"/analisis"} className='navlink'>Analisis</NavLink>
@@ -34,8 +27,6 @@ function HeadNav() {
                 <div className='salir'>
                     <button className='boton-salir' onClick={handleLogout}>Salir</button>
                 </div>
-
-
             </div>
         </>
     );

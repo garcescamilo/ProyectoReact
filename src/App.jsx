@@ -1,7 +1,7 @@
 import Login from './components/layout/login/Login';
 import LiquidationSimulator from './components/layout/liquidation/LiquidationSimulator';
 import AdminDashborad from './components/layout/admin/AdminDashboard';
-import CreateAdmin from './components/layout/admin/Create'
+import Users from './components/layout/users/Users'
 import EditAdmin from './components/layout/admin/Edit'
 import AdminResults from './components/layout/admin/AdminResults.jsx'
 import DataAnalysis from './components/layout/DataAnalysis/DataAnalysis'
@@ -21,6 +21,7 @@ function App() {
         <Route path="/liquidacion" element={isAuthenticated ? <LiquidationSimulator /> : <Navigate to="/" />} />
         <Route path="/admindash" element={isAuthenticated ? <AdminDashborad /> : <Navigate to="/" />} />
         <Route path="/analisis" element={isAuthenticated ? <DataAnalysis /> : <Navigate to="/" />} />
+        <Route path="/administrar" element={isAuthenticated ? <Users /> : <Navigate to="/" />} />
       </Routes>
     </Router>
   );

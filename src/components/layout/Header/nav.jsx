@@ -22,6 +22,7 @@ function HeadNav(props) {
                         <NavLink to={"/liquidacion"} className='navlink'>Liquidar</NavLink>
                         <NavLink to={"/admindash"} className='navlink'>DashBoard</NavLink>
                         <NavLink to={"/analisis"} className='navlink'>Analisis</NavLink>
+                        <NavLink to={"/administrar"} className='navlink'>Administrar</NavLink>
                     </div>
                 </nav>
                 <div className='salir'>

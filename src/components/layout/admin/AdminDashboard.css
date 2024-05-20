@@ -1,13 +1,18 @@
-.dashboardFilter{
-    background-color: #9b9a9a;
-    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+.dashboardFilter {
+    background-color: rgb(37, 40, 44);
+    border-radius: 10px;
+    color: white;
+    border: 1px rgba(226, 226, 226, 0.075) solid;
+
 }
-.dashboardFilter > h2{
+
+.dashboardFilter>h2 {
     font-weight: bold;
     text-align: center;
     padding: 1% 0;
 }
-.box-filter{
+
+.box-filter {
     width: 100%;
     display: flex;
     padding-bottom: 2%;
@@ -17,20 +22,24 @@
     box-shadow: 0px 10px 0px 0px rgba(148, 148, 148, 0.151);
     justify-content: space-evenly;
 }
-.filter{
+
+.filter {
     width: 17%;
     display: flex;
 }
-.inputFilter{
+
+.inputFilter {
     border-radius: 10px;
-    border:none;
+    border: none;
 }
-.inputFilter:focus{
+
+.inputFilter:focus {
     outline: none;
     border: 2px rgb(136, 136, 136) solid;
 }
-.btnFilter{
-    background-color:rgb(137, 137, 245);
+
+.btnFilter {
+    background-color: rgb(137, 137, 245);
     border: 2px solid rgb(127 127 209);
     font-size: medium;
     width: 120px;
@@ -38,4 +47,3 @@
     border-radius: 15px;
     color: white;
 }
-

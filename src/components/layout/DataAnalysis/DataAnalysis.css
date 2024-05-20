@@ -1,24 +1,27 @@
-.dataContainer{
-    padding: 2% 0 ;
-    background-color: #dddddd !important;
-    background-image: url(https://www.transparenttextures.com/patterns/arches.png);
+.dataContainer {
+    padding: 2% 0;
 }
-.dataContainer > div > h2{
+
+
+.dataContainer>div>h2 {
     font-weight: bold;
     text-align: center;
+    color: white;
 }
-.dataSection > form{
+
+.dataSection>form {
     display: flex;
     justify-content: space-evenly;
 }
-input{
+
+input {
     border-radius: 10px;
     border: none;
 }
 
-.btnAnaly{
+.btnAnaly {
     display: block;
-    background-color: rgb(137, 137, 245);
+    background-color: rgb(82, 82, 138);
     width: 30%;
     padding: 1%;
     color: white;
@@ -28,16 +31,22 @@ input{
     margin: 3% auto;
 }
 
+.btnAnaly:hover {
+    background-color: rgb(41, 68, 119);
+}
+
 /* Seccion de data analisis - resultado  */
 
-.analysisResult > h2{
+.analysisResult>h2 {
     margin-top: 4%;
     margin-bottom: 2%;
 }
-.graphicContainer{
+
+.graphicContainer {
     display: flex;
     justify-content: space-evenly;
 }
-.graphicContainer > img{
+
+.graphicContainer>img {
     border-radius: 10px;
 }

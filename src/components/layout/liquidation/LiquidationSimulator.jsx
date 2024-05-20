@@ -10,7 +10,7 @@ const LiquidationSimulator = () => {
 
       <main className="simulador-content">
         <div className="simulador-form">
-          <form>
+          <form className='formulario-li'>
             <div className="form-group">
               <label htmlFor="tipoContrato">Tipo de contrato</label>
               <select id="tipoContrato" className="form-control">

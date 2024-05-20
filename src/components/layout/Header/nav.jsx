@@ -26,9 +26,9 @@ function HeadNav() {
                 <nav>
                     <div className='nav'>
 
-                        <NavLink to={"/liquidacion"}>Liquidar</NavLink>
-                        <NavLink to={"/admindash"}>DashBoard</NavLink>
-                        <NavLink to={"/analisis"}>Analisis</NavLink>
+                        <NavLink to={"/liquidacion"} className='navlink'>Liquidar</NavLink>
+                        <NavLink to={"/admindash"} className='navlink'>DashBoard</NavLink>
+                        <NavLink to={"/analisis"} className='navlink'>Analisis</NavLink>
                     </div>
                 </nav>
                 <div className='salir'>

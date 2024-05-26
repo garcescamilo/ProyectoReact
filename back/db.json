@@ -1,14 +1,24 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "camilo",
-            "password": "1234"
-        },
-        {
-            "id": 2,
-            "name": "edy",
-            "password": "1234"
-        }
-    ]
+  "users": [
+    {
+      "id": "2",
+      "name": "edy",
+      "password": "1234"
+    },
+    {
+      "name": "olga editado",
+      "password": "olga123",
+      "id": "113a"
+    },
+    {
+      "id": "a7c1",
+      "name": "camello",
+      "password": "camello123"
+    },
+    {
+      "id": "7bb0",
+      "name": "edy pepe",
+      "password": "edy123"
+    }
+  ]
 }

@@ -15,7 +15,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
     <Router>
-      {isAuthenticated && <HeadNav setIsAuthenticated={setIsAuthenticated} />} {/* Asegúrate de pasar setIsAuthenticated como una prop */}
+      {isAuthenticated && <HeadNav setIsAuthenticated={setIsAuthenticated} />} {/* pasar setIsAuthenticated como una prop */}
       <Routes>
         <Route path="/" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/liquidacion" element={isAuthenticated ? <LiquidationSimulator /> : <Navigate to="/" />} />
